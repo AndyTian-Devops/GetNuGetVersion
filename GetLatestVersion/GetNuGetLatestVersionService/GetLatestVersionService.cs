@@ -42,8 +42,8 @@ namespace GetNuGetNuGetLatestVersionService
             //Set up a timer to trigger every two hours
             Timer timer = new Timer();
             timer.Enabled = true;
-            //An hours
-            timer.Interval = 360000;
+            //Half an hour
+            timer.Interval = 1800000;
             timer.Elapsed += new ElapsedEventHandler(this.OnTimer);
             //timer.Start();
 
