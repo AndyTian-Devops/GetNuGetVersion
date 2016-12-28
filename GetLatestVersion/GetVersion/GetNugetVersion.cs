@@ -1,0 +1,74 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace GetVersion
+{
+    public class GetNugetVersion
+    {
+        public static string DevBranch
+        {
+            get
+            {
+                return @"\\nuget\NuGet\Share\drops\ci\NuGet.Client\dev";
+            }
+        }
+
+        public static string ReleaseRC240Branch
+        {
+            get
+            {
+                return @"\\nuget\NuGet\Share\drops\ci\NuGet.Client\release-4.0.0-rc2";
+            }
+        }
+
+        public static string DevBranchTrackFile
+        {
+            get
+            {
+                return @"\\nugettestserver\nugetbuild\dev.sem";
+            }
+        }
+        public string getLatestVersion(string branchName)
+        {
+            string latestVersionNumber = null;
+
+            DirectoryInfo di = new DirectoryInfo(branchName);
+            DirectoryInfo[] diList = di.GetDirectories();
+
+            List<int> folder = new List<int>();
+
+            for (int i = 0; i < diList.Length; i++)
+            {
+                folder.Add(Int32.Parse(diList[i].Name));
+            }
+
+            latestVersionNumber = folder.Max().ToString();
+
+            return latestVersionNumber;
+        }
+
+        public void RecordVersionToFile(string version)
+        {
+            string filePath = DevBranchTrackFile;
+
+            if (!File.Exists(filePath))
+            {
+                FileStream stream = File.Create(filePath);
+                stream.Close();
+            }
+            else
+            {
+                StreamWriter writer = new StreamWriter(filePath, false);
+                writer.WriteLine();
+                writer.Close();
+            }
+
+            File.WriteAllText(filePath, "revision=");
+            File.AppendAllText(filePath, version.ToString());
+        }
+    }
+}
