@@ -25,11 +25,27 @@ namespace GetVersion
             }
         }
 
+        public static string Release40RC3Branch
+        {
+            get
+            {
+                return @"\\nuget\NuGet\Share\drops\ci\NuGet.Client\release-4.0.0-rc3";
+            }
+        }
+
         public static string DevBranchTrackFile
         {
             get
             {
                 return @"\\nugettestserver\nugetbuild\dev.sem";
+            }
+        }
+
+        public static string Release40RC3BranchTrackFile
+        {
+            get
+            {
+                return @"\\nugettestserver\nugetbuild\release40rc3.sem";
             }
         }
         public string getLatestVersion(string branchName)
@@ -51,10 +67,8 @@ namespace GetVersion
             return latestVersionNumber;
         }
 
-        public void RecordVersionToFile(string version)
+        public void RecordVersionToFile(string filePath, string version)
         {
-            string filePath = DevBranchTrackFile;
-
             if (!File.Exists(filePath))
             {
                 FileStream stream = File.Create(filePath);

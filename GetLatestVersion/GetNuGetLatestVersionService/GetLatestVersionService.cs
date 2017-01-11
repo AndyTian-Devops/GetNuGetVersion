@@ -57,8 +57,10 @@ namespace GetNuGetNuGetLatestVersionService
             getVersionLog.WriteEntry("Monitoring the build folder", EventLogEntryType.Information);
 
             GetNugetVersion getVersion = new GetNugetVersion();
+            
             //Update here
-            getVersion.RecordVersionToFile(getVersion.getLatestVersion(GetNugetVersion.DevBranch));
+            getVersion.RecordVersionToFile(GetNugetVersion.DevBranchTrackFile, getVersion.getLatestVersion(GetNugetVersion.DevBranch));
+            getVersion.RecordVersionToFile(GetNugetVersion.Release40RC3BranchTrackFile, getVersion.getLatestVersion(GetNugetVersion.Release40RC3Branch));
 
             //throw new NotImplementedException();
         }
