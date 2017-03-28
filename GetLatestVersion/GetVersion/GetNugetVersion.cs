@@ -49,6 +49,14 @@ namespace GetVersion
             }
         }
 
+        public static string Release42RTMBranch
+        {
+            get
+            {
+                return @"\\nuget\nuget\Share\drops\ci\NuGet.Client\release-4.2.0-rtm";
+            }
+        }
+
         public static string DevBranchTrackFile
         {
             get
@@ -78,6 +86,14 @@ namespace GetVersion
             get
             {
                 return @"\\nugettestserver\nugetbuild\release41rtm.sem";
+            }
+        }
+
+        public static string Release42RTMBranchTrackFile
+        {
+            get
+            {
+                return @"\\nugettestserver\nugetbuild\release42rtm.sem";
             }
         }
         public string getLatestVersion(string branchName)
