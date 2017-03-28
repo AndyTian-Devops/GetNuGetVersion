@@ -63,6 +63,7 @@ namespace GetNuGetNuGetLatestVersionService
             getVersion.RecordVersionToFile(GetNugetVersion.Release40RC3BranchTrackFile, getVersion.getLatestVersion(GetNugetVersion.Release40RC3Branch));
             getVersion.RecordVersionToFile(GetNugetVersion.Release40RTMBranchTrackFile, getVersion.getLatestVersion(GetNugetVersion.Release40RTMBranch));
             getVersion.RecordVersionToFile(GetNugetVersion.Release41RTMBranchTrackFile, getVersion.getLatestVersion(GetNugetVersion.Release41RTMBranch));
+            getVersion.RecordVersionToFile(GetNugetVersion.Release42RTMBranchTrackFile, getVersion.getLatestVersion(GetNugetVersion.Release42RTMBranch));
 
             //throw new NotImplementedException();
         }
