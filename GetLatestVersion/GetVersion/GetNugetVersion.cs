@@ -57,6 +57,14 @@ namespace GetVersion
             }
         }
 
+        public static string Release43Beta1Branch
+        {
+            get
+            {
+                return @"\\nuget\nuget\Share\drops\ci\NuGet.Client\release-4.3.0-beta1";
+            }
+        }
+
         public static string DevBranchTrackFile
         {
             get
@@ -96,6 +104,15 @@ namespace GetVersion
                 return @"\\nugettestserver\nugetbuild\release42rtm.sem";
             }
         }
+
+        public static string Release43Beta1BranchTrackFile
+        {
+            get
+            {
+                return @"\\nugettestserver\nugetbuild\release43beta1.sem";
+            }
+        }
+
         public string getLatestVersion(string branchName)
         {
             string latestVersionNumber = null;
