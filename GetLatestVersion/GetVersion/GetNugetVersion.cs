@@ -13,7 +13,7 @@ namespace GetVersion
         {
             get
             {
-                return @"\\nuget\NuGet\Share\drops\ci\NuGet.Client\dev";
+                return @"";
             }
         }
 
@@ -21,7 +21,7 @@ namespace GetVersion
         {
             get
             {
-                return @"\\nuget\NuGet\Share\drops\ci\NuGet.Client\release-4.0.0-rc2";
+                return @"";
             }
         }
 
@@ -29,7 +29,7 @@ namespace GetVersion
         {
             get
             {
-                return @"\\nuget\NuGet\Share\drops\ci\NuGet.Client\release-4.0.0-rc3";
+                return @"";
             }
         }
 
@@ -37,7 +37,7 @@ namespace GetVersion
         {
             get
             {
-                return @"\\nuget\nuget\Share\drops\ci\NuGet.Client\release-4.0.0-rtm";
+                return @"";
             }
         }
 
@@ -45,7 +45,7 @@ namespace GetVersion
         {
             get
             {
-                return @"\\nuget\nuget\Share\drops\ci\NuGet.Client\release-4.1.0-rtm";
+                return @"";
             }
         }
 
@@ -53,7 +53,7 @@ namespace GetVersion
         {
             get
             {
-                return @"\\nuget\nuget\Share\drops\ci\NuGet.Client\release-4.2.0-rtm";
+                return @"";
             }
         }
 
@@ -61,7 +61,7 @@ namespace GetVersion
         {
             get
             {
-                return @"\\nuget\nuget\Share\drops\ci\NuGet.Client\release-4.3.0-beta1";
+                return @"";
             }
         }
 
